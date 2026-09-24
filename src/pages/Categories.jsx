@@ -1,8 +1,5 @@
-import React from "react";
-import Navbar from "../components/Navbar";
 import ProductCard from "../components/ProductCard";
-import Footer from "../components/Footer";
-import Hero_2 from "../components/Hero_2";
+
 import Hero_3 from "../components/Hero_3";
 
 const Categories = () => {
@@ -16,7 +13,9 @@ const Categories = () => {
               "url(https://img.freepik.com/premium-photo/men-stylish-casual-clothing-accessories-wooden-background_151851-981.jpg)",
           }}
         >
-          <h1 className="text-5xl font-bold text-gray-700">Product Categories</h1>
+          <h1 className="text-5xl font-bold text-gray-700">
+            Product Categories
+          </h1>
         </div>
 
         <ProductCard />

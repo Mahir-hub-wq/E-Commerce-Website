@@ -4,7 +4,7 @@ const Rating = ({ rating, reviews }) => {
       {[1, 2, 3, 4, 5].map((star) => (
         <span
           key={star}
-          className={`text-xl ${
+          className={`text-3xl ${
             star <= Math.round(rating)
               ? "text-yellow-400"
               : "text-gray-300"

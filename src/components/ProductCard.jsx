@@ -48,45 +48,56 @@ const ProductCard = () => {
         <div className="mx-20 py-18">
           <div className="flex flex-wrap justify-evenly gap-10">
             {products.slice(0, 6).map((value) => (
-              <div key={value.id} className="w-90 rounded-lg  p-4 bg-gray-100">
-                <Button text="New" className="bg-red-500 text-white" />
-                <img
-                  src={value.image}
-                  alt={value.title}
-                  className="w-full h-72 object-contain"
-                />
+              <div key={value.id} className="w-90">
+                {/* Gray box: only the image (and the "New" badge) */}
+                <div className="rounded-lg p-4 bg-gray-100">
+                  <Button text="New" className="bg-red-500 text-white" />
+                  <img
+                    src={value.image}
+                    alt={value.title}
+                    className="w-full h-72 object-contain"
+                  />
+                </div>
+
+                {/* Below the gray box: rating, title, price */}
                 <Rating
                   className="flex flex-col items-center"
                   rating={value.rating.rate}
                   reviews={value.rating.count}
                 />
-                <p className="text-sm text-center text-gray-500 my-5">
-                  {value.title}
-                </p>
-                <div className="flex justify-around items-center py-10">
-                  <h1 className="text-xl font-bold ">${value.price}</h1>
 
-                  <h1 className="line-through text-pink-500 text-xl font-bold">
-                    $60.5
-                  </h1>
+                <div>
+                  <p className="text-lg text-center my-5 ">{value.title}</p>
+                </div>
 
-                  <div>
+                <div className="flex flex-col items-center px-5 gap-4">
+                  {/* Prices */}
+                  <div className="flex justify-around items-center w-full">
+                    <h1 className="text-2xl font-bold">${value.price}</h1>
+
+                    <h1 className="line-through text-[#ff003c] text-2xl font-semibold">
+                      $60.5
+                    </h1>
+                  </div>
+
+                  {/* Add to Cart Button */}
+                  <div className="w-full">
                     <button
                       onClick={() => dispatch(AddToCart(value))}
-                      className="w-full px-3 py-3 font-bold rounded-2xl bg-blue-500 hover:bg-blue-400 text-white"
+                      className="w-full px-3 py-3 font-bold rounded-2xl bg-sky-400 text-lg text-white"
                     >
                       Add to Cart
                     </button>
                   </div>
                 </div>
-                <div>
-                  <button
-                    // onClick={() => dispatch(AddToCart(value))}
-                    className="w-full px-3 py-3 font-bold rounded-2xl bg-blue-500 hover:bg-blue-400 text-white"
-                  >
-                    View Product Details
-                 </button>
-                </div>
+                {/* <div>
+      <button
+        // onClick={() => dispatch(AddToCart(value))}
+        className="w-full px-3 py-3 font-bold rounded-2xl bg-blue-500 hover:bg-blue-400 text-white"
+      >
+        View Product Details
+      </button>
+    </div> */}
               </div>
             ))}
           </div>

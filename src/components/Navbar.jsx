@@ -1,12 +1,13 @@
-import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import Button from "./Button";
 
 const Navbar = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
-  const [favCount, SetFavCunt] = useState(5);
-  console.log(favCount);
+  const favCount = 5;
+  // const [favCount, SetFavCunt] = useState(5);
+  // console.log(favCount);
+
 
   return (
     <nav className="w-full bg-white shadow-md sticky top-0 z-50">
@@ -205,6 +206,7 @@ const Navbar = () => {
 
             <span className="absolute -top-2 -right-2 bg-sky-400 text-white text-[15px] font-bold w-7 h-7 rounded-full flex items-center justify-center">
               {favCount}
+              
             </span>
           </div>
 
