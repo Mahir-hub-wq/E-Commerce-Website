@@ -17,6 +17,7 @@ const ProductCard = () => {
 
   useEffect(() => {
     dispatch(fetchProducts());
+    
   }, [dispatch]);
 
   // Always 2 product in Cart
