@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 // import {API, getData} from "../services/api"
 import { useSelector, useDispatch } from "react-redux";
-import { fetchProducts } from "../redux/slices/productslice";
+import { fetchProducts } from "../redux/slices/productSlice";
 import Rating from "../components/Rating";
 import Button from "./Button";
 import { AddToCart } from "../redux/slices/cartSlice";
@@ -17,7 +17,7 @@ const ProductCard = () => {
 
   useEffect(() => {
     dispatch(fetchProducts());
-    
+
   }, [dispatch]);
 
   // Always 2 product in Cart
