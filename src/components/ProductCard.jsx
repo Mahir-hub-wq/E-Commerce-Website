@@ -114,7 +114,7 @@ const ProductCard = () => {
 
                     <Button
                       text="Buy"
-                      className="bg-yellow-400 text-white font-bold"
+                      className="bg-yellow-400 hover:bg-amber-600 text-white font-bold"
                     />
 
                   </div>
@@ -131,7 +131,7 @@ const ProductCard = () => {
                         font-bold
                         rounded-2xl
                         bg-sky-400
-                        hover:bg-sky-500
+                        hover:bg-sky-600
                         text-lg
                         text-white
                         flex
